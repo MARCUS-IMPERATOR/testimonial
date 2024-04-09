@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    font-family: "Barlow Semi Condensed";
+    font-size: 62.5%;
+}
+
+:root{
+    --Moderate_violet: hsl(263, 55%, 52%);
+    --Very_dark_grayish_blue: hsl(217, 19%, 35%);
+    --Very_dark_blackish_blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light_gray: hsl(0, 0%, 81%);
+    --Light_grayish_blue: hsl(210, 46%, 95%);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5%;
+    gap: 4rem;
+    background-color: var(--Light_grayish_blue);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    row-gap: 25px;
+    column-gap: 32px;
+}
+.container > div{
+    padding: 20px;
+    border-radius: 10px;
+}
+.dan{
+    grid-column: span 2;
+    background-color: var(--Moderate_violet);
+}
+.jon{
+    grid-column: span 1;
+    background-color: var(--Very_dark_grayish_blue);
+}
+.kira{
+    grid-column: span 1;
+    grid-row: span 2;
+    background-color: var(--White);
+}
+.jean{
+    grid-column: span 1;
+    background-color: var(--White);
+}
+.pat{
+    grid-column: span 2;
+    background-color: var(--Very_dark_blackish_blue);
+}
+
+.pic_cont{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 20px;
+}
+
+.pic{
+    border-radius: 50%;
+    max-width: 30px;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.wht{
+    color: var(--White);
+}
+.blk{
+    color: var(--Very_dark_blackish_blue);
+}
+.role{
+    font-weight: 400;
+    opacity: 0.5;
+}
+.title{
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+.parag{
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.75;
+    line-height: 2rem;
+}
+.dani{
+    border: 2px solid hsl(265, 67%, 68%);
+}
+.patr{
+    border: 2px solid hsl(262, 32%, 50%);
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container > div {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
